@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Extract images from daraz using extension",
     "background": {
-      "serice_worker": "background.js"
+      "service_worker": "background.js"
     },
     "icons": {
       "16": "images/icon-16.png",

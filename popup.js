@@ -49,8 +49,6 @@ downloadButton.addEventListener("click", () => {
     })
 
     if(imgsUrl.length > 0){
-        chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-            chrome.tabs.sendMessage(tabs[0].id ,{action: "DOWNLOAD_IMAGES", imagesUrl: imgsUrl})
-        } )
+            chrome.runtime.sendMessage({action: "DOWNLOAD_IMAGES", imagesUrl: imgsUrl})
     }
 })
